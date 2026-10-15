@@ -31,3 +31,11 @@ if (video && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   video.pause();
   video.removeAttribute('autoplay');
 }
+
+if (dateInput) {
+  const today = new Date();
+  const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60_000)
+    .toISOString()
+    .slice(0, 10);
+  dateInput.min = localDate;
+}
