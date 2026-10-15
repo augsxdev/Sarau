@@ -26,3 +26,8 @@ if (menuButton && navigation) {
     }
   });
 }
+
+if (video && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  video.pause();
+  video.removeAttribute('autoplay');
+}
