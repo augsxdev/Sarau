@@ -171,3 +171,9 @@ h1 em, h2 em { color: var(--terra); font-weight: 500; }
   .footer-top { grid-column: 2; grid-row: 1; }
   .site-footer small { grid-row: 3; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .hero__video { display: none; }
+}
