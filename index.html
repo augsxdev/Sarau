@@ -77,3 +77,30 @@
         </div>
         <div class="gathering__image" role="img" aria-label="Luzes quentes e mesas acolhedoras no interior do SARAU"></div>
       </section>
+
+      <section class="booking section-pad" id="reservas" aria-labelledby="booking-title">
+        <div class="section-index section-index--light"><span>04</span><span class="index-line"></span><span>Reservas</span></div>
+        <div class="booking__layout">
+          <div><p class="eyebrow">Seu próximo encontro</p><h2 id="booking-title">A gente guarda<br />um lugar para <em>você.</em></h2><p class="booking__copy">Estamos preparando nosso canal de reservas. Deixe os dados da sua visita para continuar a experiência quando ele estiver conectado.</p></div>
+          <form class="booking-form">
+            <label>Seu nome<input name="name" autocomplete="name" required placeholder="Como podemos chamar você?" /></label>
+            <div class="booking-form__row">
+              <label>Data desejada<input name="date" type="date" required /></label>
+              <label>Pessoas<select name="guests" required><option value="" selected disabled>Escolha</option><option>1–2 pessoas</option><option>3–4 pessoas</option><option>5–6 pessoas</option><option>7 ou mais</option></select></label>
+            </div>
+            <label>Seu e-mail<input name="email" type="email" autocomplete="email" required placeholder="voce@email.com" /></label>
+            <button class="button button--terra" type="submit">Preparar pedido <span aria-hidden="true">↗</span></button>
+            <p class="form-note" aria-live="polite">Protótipo: o envio será ativado quando o canal oficial estiver configurado.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark wordmark--footer" href="#inicio">SARAU<span>BAR & SOCIAL CLUB</span></a>
+      <p>Aqui também mora cultura.</p>
+      <a class="footer-top" href="#inicio">Voltar ao início ↑</a>
+      <small>© <span id="year"></span> SARAU. Feito para bons encontros.</small>
+    </footer>
+  </body>
+</html>
