@@ -39,3 +39,14 @@ if (dateInput) {
     .slice(0, 10);
   dateInput.min = localDate;
 }
+
+if (bookingForm && formNote) {
+  bookingForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!bookingForm.reportValidity()) return;
+    formNote.textContent = 'Dados preenchidos. O envio será concluído quando o canal oficial de reservas estiver conectado.';
+  });
+}
+
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
