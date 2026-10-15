@@ -67,3 +67,19 @@ h1 em, h2 em { color: var(--terra); font-weight: 500; }
 .intro__mark::before { position: absolute; inset: 1rem; border: 1px solid rgb(184 73 39 / 24%); border-radius: 50%; content: ''; }
 .intro__mark i { position: absolute; right: 20%; bottom: 22%; width: 3.5rem; height: 5.5rem; border-radius: 100% 0 100% 0; background: #304638; transform: rotate(-25deg); }
 
+.program { background: var(--green); color: #f3eee4; }
+.section-index--light { color: #b9b9a7; }
+.program__heading { display: flex; align-items: end; justify-content: space-between; gap: 4rem; margin: 4.5rem 0 4rem; }
+.program h2 { margin-bottom: 0; }
+.program h2 em, .booking h2 em { color: #d37a55; }
+.program__lead { max-width: 20rem; margin: 0 3vw .55rem 0; color: #c2c1b3; font-size: .9rem; line-height: 1.8; }
+.program__cards { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgb(242 238 229 / 27%); border-bottom: 1px solid rgb(242 238 229 / 27%); }
+.program-card { position: relative; display: flex; min-height: 17rem; flex-direction: column; justify-content: space-between; padding: 1.5rem 1.7rem 1.8rem 0; }
+.program-card + .program-card { border-left: 1px solid rgb(242 238 229 / 27%); padding-left: 1.7rem; }
+.program-card__number { color: #d37a55; font-size: .62rem; letter-spacing: .12em; }
+.program-card__tag { margin: 0 0 .7rem; color: #d37a55; font-size: .59rem; letter-spacing: .18em; text-transform: uppercase; }
+.program-card h3 { margin: 0 0 .55rem; font: 500 clamp(1.3rem, 2vw, 2rem) var(--serif); }
+.program-card div > p:last-child { margin: 0; color: #babdb2; font-size: .79rem; line-height: 1.7; }
+.program-card__arrow { position: absolute; right: 1.8rem; bottom: 1.65rem; color: #d37a55; }
+.program__note { display: flex; align-items: center; gap: .8rem; margin: 1.2rem 0 0; color: #c2c1b3; font-size: .66rem; letter-spacing: .08em; }
+.program__note span { width: .35rem; height: .35rem; border-radius: 50%; background: #d37a55; }
