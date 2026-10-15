@@ -1,0 +1,19 @@
+:root {
+  color-scheme: light;
+  --cream: #f2eee5;
+  --paper: #e9e1d4;
+  --ink: #211d19;
+  --muted: #776d61;
+  --terra: #b84927;
+  --terra-dark: #90381d;
+  --green: #1d3027;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --sans: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+::selection { background: #cf7958; color: #fffaf3; }
