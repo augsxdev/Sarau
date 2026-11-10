@@ -20,7 +20,9 @@
           <path fill="#b55236" d="M32 18v18H19v-8h7V18Z"/>
           <circle cx="21" cy="11" r="3.8" fill="#eadfd1"/>
         </svg>
-        <span class="wordmark__name">SARAU<small>BAR E CLUBE SOCIAL</small></span>
+        <span class="wordmark__name"><svg class="brand-sarau" width="351" height="90" viewBox="10 10 351 90" aria-hidden="true">
+          <path fill="currentColor" d="M72 10H37C19 10 10 17 10 31v19c0 8 4 13 13 15l15 2c3 0 4 2 4 6v2c0 4-2 5-6 5-7 0-16-2-26-5v25h42c14 0 21-7 21-18V63c0-7-4-12-12-14l-16-3c-4-1-5-3-5-7v-2c0-3 2-5 6-5h26Z M74 100 97 10h25l24 90h-18l-11-38-11 38Z M150 10h35c19 0 30 11 30 25 0 13-9 22-25 25 11 9 18 22 27 40h-29l-12-42v42h-26Z M216 100l25-90h28l24 90h-31l-11-40-10 40Z M293 10h31v67h7V10h30v76c0 10-7 14-17 14h-33c-12 0-18-7-18-17Z"/>
+        </svg><small>BAR E CLUBE SOCIAL</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
         <span class="menu-toggle__label">Menu</span><span class="menu-toggle__icon" aria-hidden="true"></span>
@@ -48,7 +50,7 @@
         <figure class="hero__figure">
           <div class="hero__portal">
             <img class="hero__poster" src="assets/sarau-portal-poster.jpg" width="3840" height="2160" fetchpriority="high" alt="Um arco iluminado revela mesas, plantas e um drink no balcão do Sarau" />
-            <video class="hero__video" muted playsinline preload="none" data-src="assets/sarau-portal-reveal.mp4" aria-hidden="true" disablepictureinpicture></video>
+            <video class="hero__video" muted playsinline loop preload="none" data-src="assets/sarau-portal-reveal.mp4" aria-hidden="true" disablepictureinpicture></video>
           </div>
           <figcaption class="hero__caption">
             <span>Aqui também mora cultura.</span>
@@ -58,43 +60,58 @@
       </section>
 
       <section class="intro section-pad" id="casa" aria-labelledby="intro-title">
-        <div class="section-index"><span>01</span><span class="index-line"></span><span>A casa</span></div>
-        <div class="intro__copy">
-          <p class="eyebrow eyebrow--dark">Mais que uma noite</p>
-          <h2 id="intro-title">Uma casa aberta<br />para <em>bons encontros.</em></h2>
-          <p class="body-copy">O SARAU reúne bar e vida cultural em um espaço para chegar, brindar e deixar a noite seguir seu próprio ritmo.</p>
-          <a class="under-link" href="#encontros">Um pouco do que acontece <span aria-hidden="true">↗</span></a>
+        <div class="intro__copy" data-reveal>
+          <div class="section-index"><span>01</span><span class="index-line"></span><span>A casa</span></div>
+          <p class="eyebrow eyebrow--dark">O primeiro brinde</p>
+          <h2 id="intro-title">Puxa uma <span>cadeira.</span></h2>
+          <p class="body-copy">A noite começa assim: uma taça na mesa, um som vindo do fundo e alguém dizendo «fica mais um pouco». O Sarau é a casa onde esse convite vira costume.</p>
+          <a class="under-link" href="#programacao">O que toca por aqui <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="intro__mark" aria-hidden="true"><span></span></div>
+        <figure class="house-art" data-reveal>
+          <svg viewBox="0 0 360 350" aria-hidden="true">
+            <ellipse cx="180" cy="293" rx="111" ry="16" fill="#a3452d" opacity=".14"/>
+            <circle cx="180" cy="152" r="112" fill="#c47f4e"/>
+            <circle cx="180" cy="152" r="126" fill="none" stroke="#a3452d" stroke-width="1" stroke-dasharray="2 6"/>
+            <path d="M130 140c13-9 32-9 52-4 17 4 29 4 45-2-1 33-21 54-48 54s-46-19-49-48Z" fill="#843023"/>
+            <path d="M133 93h94c6 19 9 36 7 52-4 30-23 48-54 48s-50-18-54-48c-2-16 1-33 7-52Zm47 100v87m-38 0h76" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-width="4"/>
+            <path d="M147 108c-5 19-5 35 1 47" fill="none" stroke="#f6f2e9" stroke-linecap="round" stroke-width="2"/>
+            <path class="house-art__spark" d="M268 69v30m-15-15h30M83 184v18m-9-9h18" fill="none" stroke="#843023" stroke-linecap="round" stroke-width="2"/>
+          </svg>
+          <figcaption>01 / A noite começa à mesa</figcaption>
+        </figure>
       </section>
 
       <section class="program section-pad" id="programacao" aria-labelledby="program-title">
         <div class="section-index section-index--light"><span>02</span><span class="index-line"></span><span>Programação</span></div>
-        <div class="program__heading">
+        <div class="program__heading" data-reveal>
           <div><p class="eyebrow">Noite após noite</p><h2 id="program-title">A cidade cabe<br />em uma <em>mesa.</em></h2></div>
           <p class="program__lead">Música, ideias e gente boa de conversa. A programação completa chega em breve.</p>
         </div>
         <div class="program__cards">
-          <article class="program-card"><span class="program-card__number">01</span><div><p class="program-card__tag">Ao vivo</p><h3>Som que aproxima.</h3><p>Encontros musicais em clima de casa.</p></div></article>
-          <article class="program-card"><span class="program-card__number">02</span><div><p class="program-card__tag">Cultura</p><h3>Novas conversas.</h3><p>Uma casa aberta a ideias e expressão.</p></div></article>
-          <article class="program-card"><span class="program-card__number">03</span><div><p class="program-card__tag">À mesa</p><h3>Mais um brinde.</h3><p>Drinks, encontros e tempo para ficar.</p></div></article>
+          <article class="program-card" data-reveal><span class="program-card__number">01</span><div><p class="program-card__tag">Ao vivo</p><h3>Som que aproxima.</h3><p>Encontros musicais em clima de casa.</p></div></article>
+          <article class="program-card" data-reveal><span class="program-card__number">02</span><div><p class="program-card__tag">Cultura</p><h3>Novas conversas.</h3><p>Uma casa aberta a ideias e expressão.</p></div></article>
+          <article class="program-card" data-reveal><span class="program-card__number">03</span><div><p class="program-card__tag">À mesa</p><h3>Mais um brinde.</h3><p>Drinks, encontros e tempo para ficar.</p></div></article>
         </div>
         <p class="program__note"><span></span> Datas e atrações serão anunciadas por aqui.</p>
       </section>
 
       <section class="gathering section-pad" id="encontros" aria-labelledby="gathering-title">
-        <div class="gathering__text">
-          <div class="section-index"><span>03</span><span class="index-line"></span><span>Encontros</span></div>
-          <p class="eyebrow eyebrow--dark">Chegue como quiser</p>
-          <h2 id="gathering-title">Uma mesa.<br />Boas histórias.<br /><em>O resto acontece.</em></h2>
+        <div class="gathering__text" data-reveal>
+          <div class="section-index section-index--light"><span>03</span><span class="index-line"></span><span>Encontros</span></div>
+          <p class="eyebrow">Entre um gole e outro</p>
+          <h2 id="gathering-title">Só mais <span>uma história.</span></h2>
+          <p class="gathering__copy">Você chega para tomar uma. Quando vê, a mesa já cresceu, a música mudou e alguém começou aquela história que só dá para contar pessoalmente.</p>
           <a class="button button--outline" href="#reservas">Planejar uma visita <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="gathering__image" role="img" aria-label="Luzes quentes e mesas acolhedoras no interior do SARAU"></div>
+        <figure class="gathering__figure" data-reveal>
+          <div class="gathering__photo"><img src="assets/sarau-brinde.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Duas pessoas brindam à luz de vela em uma mesa com azeitonas" /></div>
+          <figcaption><span>03 / Encontros</span><span>À mesa, sem pressa.</span></figcaption>
+        </figure>
       </section>
 
       <section class="booking section-pad" id="reservas" aria-labelledby="booking-title">
         <div class="section-index section-index--light"><span>04</span><span class="index-line"></span><span>Reservas</span></div>
-        <div class="booking__layout">
+        <div class="booking__layout" data-reveal>
           <div><p class="eyebrow">Seu próximo encontro</p><h2 id="booking-title">A gente guarda<br />um lugar para <em>você.</em></h2><p class="booking__copy">Estamos preparando nosso canal de reservas. Deixe os dados da sua visita para continuar a experiência quando ele estiver conectado.</p></div>
           <form class="booking-form">
             <label>Seu nome<input name="name" autocomplete="name" required placeholder="Como podemos chamar você?" /></label>
@@ -111,10 +128,21 @@
     </main>
 
     <footer class="site-footer">
-      <a class="wordmark wordmark--footer" href="#inicio"><span class="wordmark__name">SARAU<small>BAR E CLUBE SOCIAL</small></span></a>
+      <a class="wordmark wordmark--footer" href="#inicio" aria-label="SARAU, início"><span class="wordmark__name"><svg class="brand-sarau" width="351" height="90" viewBox="10 10 351 90" aria-hidden="true">
+          <path fill="currentColor" d="M72 10H37C19 10 10 17 10 31v19c0 8 4 13 13 15l15 2c3 0 4 2 4 6v2c0 4-2 5-6 5-7 0-16-2-26-5v25h42c14 0 21-7 21-18V63c0-7-4-12-12-14l-16-3c-4-1-5-3-5-7v-2c0-3 2-5 6-5h26Z M74 100 97 10h25l24 90h-18l-11-38-11 38Z M150 10h35c19 0 30 11 30 25 0 13-9 22-25 25 11 9 18 22 27 40h-29l-12-42v42h-26Z M216 100l25-90h28l24 90h-31l-11-40-10 40Z M293 10h31v67h7V10h30v76c0 10-7 14-17 14h-33c-12 0-18-7-18-17Z"/>
+        </svg><small>BAR E CLUBE SOCIAL</small></span></a>
       <p>Aqui também mora cultura.</p>
       <a class="footer-top" href="#inicio">Voltar ao início ↑</a>
-      <small>© <span id="year"></span> SARAU. Feito para bons encontros.</small>
+      <div class="footer-meta">
+        <small>© <span id="year"></span> SARAU. Feito para bons encontros.</small>
+        <a class="studio-credit" href="https://studioeclyr.com.br/" aria-label="Criado por studioeclyr.com.br">
+          <span>Criado por</span><svg class="brand-eclyr" width="428" height="77" viewBox="14 1 428 77" aria-hidden="true">
+          <path fill="currentColor" d="M14 15h73v12H26v13h61v12H26v14h61v12H14Z M184 40h-12v-5c0-5-4-8-9-8h-43c-7 0-11 4-11 10v19c0 6 4 10 11 10h43c5 0 9-4 9-9v-4h12v5c0 12-8 20-21 20h-43c-14 0-23-9-23-22V37c0-13 9-22 23-22h43c13 0 21 8 21 20Z M196 15h12v51h60v12h-72Z M255 15h17l24 23 24-23h17l-35 34v29h-12V49Z M343 15h52c12 0 21 7 21 19 0 11-8 18-20 18h-3l24 26h-17l-24-26h-21v26h-12Zm12 12v13h41c5 0 8-2 8-6s-3-7-8-7Z"/>
+          <circle cx="429" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path fill="none" stroke="currentColor" stroke-width="2" d="M426 20V8h3a3 3 0 0 1 0 6h-3m3 0 4 6"/>
+        </svg><span>studioeclyr.com.br</span>
+        </a>
+      </div>
     </footer>
   </body>
 </html>

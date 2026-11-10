@@ -48,7 +48,7 @@ if (video && playback) {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   const syncPlayback = () => {
-    playback.textContent = video.ended ? 'Rever animação' : video.paused ? 'Continuar animação' : 'Pausar animação';
+    playback.textContent = video.paused ? 'Continuar animação' : 'Pausar animação';
   };
 
   const showPoster = () => {
@@ -76,11 +76,10 @@ if (video && playback) {
     syncPlayback();
   });
   video.addEventListener('pause', syncPlayback);
-  video.addEventListener('ended', syncPlayback);
   video.addEventListener('error', showPoster);
 
   playback.addEventListener('click', () => {
-    if (video.paused || video.ended) play();
+    if (video.paused) play();
     else video.pause();
   });
 
@@ -93,6 +92,19 @@ if (video && playback) {
     }
   });
   play();
+}
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('has-entered');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element));
 }
 
 if (dateInput) {
