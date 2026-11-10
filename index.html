@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f2eee5" />
+    <meta name="theme-color" content="#f6f2e9" />
     <meta name="description" content="SARAU — bar e clube social. Um lugar para encontros, cultura e noites que ficam." />
-    <title>SARAU — Bar & Social Club</title>
-    <link rel="preload" as="image" href="assets/sarau-portal-poster.jpg" />
+    <title>SARAU — Bar e Clube Social</title>
+    <link rel="preload" as="image" href="assets/sarau-portal-poster.jpg" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
     <header class="site-header">
-      <a class="wordmark" href="#inicio" aria-label="SARAU, início">SARAU<span>BAR & SOCIAL CLUB</span></a>
+      <a class="wordmark" href="#inicio" aria-label="SARAU, início">
+        <svg class="wordmark__symbol" width="32" height="36" viewBox="0 0 32 36" aria-hidden="true">
+          <path fill="#b8904f" d="M0 36V16a16 16 0 0 1 32 0v20Z"/>
+          <path fill="#1a1714" d="M8 2.1A16 16 0 0 1 32 16v5h-6v7h-7v8h-6V19H8Z"/>
+          <path fill="#b55236" d="M32 18v18H19v-8h7V18Z"/>
+          <circle cx="21" cy="11" r="3.8" fill="#eadfd1"/>
+        </svg>
+        <span class="wordmark__name">SARAU<small>BAR E CLUBE SOCIAL</small></span>
+      </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
         <span class="menu-toggle__label">Menu</span><span class="menu-toggle__icon" aria-hidden="true"></span>
       </button>
@@ -25,22 +34,27 @@
     </header>
 
     <main>
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <video class="hero__video" autoplay muted playsinline preload="auto" poster="assets/sarau-portal-poster.jpg" aria-label="O interior acolhedor do SARAU se revela por um arco iluminado">
-          <source src="assets/sarau-portal-reveal.mp4" type="video/mp4" />
-        </video>
-        <div class="hero__veil" aria-hidden="true"></div>
+      <section class="hero" id="inicio" aria-labelledby="hero-title" tabindex="-1">
         <div class="hero__content">
-          <p class="eyebrow"><span></span> Um lugar para ficar mais um pouco</p>
-          <h1 id="hero-title">A noite encontra<br /><em>seu lugar.</em></h1>
-          <p class="hero__intro">Bar, cultura e encontros em uma casa feita para descobrir sem pressa.</p>
+          <p class="eyebrow eyebrow--dark"><span></span> Bar e clube social</p>
+          <h1 id="hero-title">A noite encontra <em>seu lugar.</em></h1>
+          <p class="hero__intro">Drinks, música e cultura em uma casa feita para chegar sem pressa e ficar mais um pouco.</p>
           <div class="hero__actions">
-            <a class="button button--terra" href="#programacao">Descobrir o SARAU <span aria-hidden="true">↗</span></a>
+            <a class="button button--terra" href="#programacao">Ver programação <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="#casa">Conheça a casa <span aria-hidden="true">↓</span></a>
           </div>
         </div>
-        <p class="hero__side-note" aria-hidden="true">Aqui também<br />mora cultura.</p>
-        <a class="hero__scroll" href="#casa"><span></span> Role para descobrir</a>
+
+        <figure class="hero__figure">
+          <div class="hero__portal">
+            <img class="hero__poster" src="assets/sarau-portal-poster.jpg" width="3840" height="2160" fetchpriority="high" alt="Um arco iluminado revela mesas, plantas e um drink no balcão do Sarau" />
+            <video class="hero__video" muted playsinline preload="none" data-src="assets/sarau-portal-reveal.mp4" aria-hidden="true" disablepictureinpicture></video>
+          </div>
+          <figcaption class="hero__caption">
+            <span>Aqui também mora cultura.</span>
+            <button class="hero__playback" type="button" hidden>Pausar animação</button>
+          </figcaption>
+        </figure>
       </section>
 
       <section class="intro section-pad" id="casa" aria-labelledby="intro-title">
@@ -51,7 +65,7 @@
           <p class="body-copy">O SARAU reúne bar e vida cultural em um espaço para chegar, brindar e deixar a noite seguir seu próprio ritmo.</p>
           <a class="under-link" href="#encontros">Um pouco do que acontece <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="intro__mark" aria-hidden="true"><span>S</span><i></i></div>
+        <div class="intro__mark" aria-hidden="true"><span></span></div>
       </section>
 
       <section class="program section-pad" id="programacao" aria-labelledby="program-title">
@@ -61,9 +75,9 @@
           <p class="program__lead">Música, ideias e gente boa de conversa. A programação completa chega em breve.</p>
         </div>
         <div class="program__cards">
-          <article class="program-card"><span class="program-card__number">01</span><div><p class="program-card__tag">Ao vivo</p><h3>Som que aproxima.</h3><p>Encontros musicais em clima de casa.</p></div><span class="program-card__arrow" aria-hidden="true">↗</span></article>
-          <article class="program-card"><span class="program-card__number">02</span><div><p class="program-card__tag">Cultura</p><h3>Novas conversas.</h3><p>Uma casa aberta a ideias e expressão.</p></div><span class="program-card__arrow" aria-hidden="true">↗</span></article>
-          <article class="program-card"><span class="program-card__number">03</span><div><p class="program-card__tag">À mesa</p><h3>Mais um brinde.</h3><p>Drinks, encontros e tempo para ficar.</p></div><span class="program-card__arrow" aria-hidden="true">↗</span></article>
+          <article class="program-card"><span class="program-card__number">01</span><div><p class="program-card__tag">Ao vivo</p><h3>Som que aproxima.</h3><p>Encontros musicais em clima de casa.</p></div></article>
+          <article class="program-card"><span class="program-card__number">02</span><div><p class="program-card__tag">Cultura</p><h3>Novas conversas.</h3><p>Uma casa aberta a ideias e expressão.</p></div></article>
+          <article class="program-card"><span class="program-card__number">03</span><div><p class="program-card__tag">À mesa</p><h3>Mais um brinde.</h3><p>Drinks, encontros e tempo para ficar.</p></div></article>
         </div>
         <p class="program__note"><span></span> Datas e atrações serão anunciadas por aqui.</p>
       </section>
@@ -97,7 +111,7 @@
     </main>
 
     <footer class="site-footer">
-      <a class="wordmark wordmark--footer" href="#inicio">SARAU<span>BAR & SOCIAL CLUB</span></a>
+      <a class="wordmark wordmark--footer" href="#inicio"><span class="wordmark__name">SARAU<small>BAR E CLUBE SOCIAL</small></span></a>
       <p>Aqui também mora cultura.</p>
       <a class="footer-top" href="#inicio">Voltar ao início ↑</a>
       <small>© <span id="year"></span> SARAU. Feito para bons encontros.</small>
